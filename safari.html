@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kenya - Safari Blu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="menu-wrapper">
+                <!-- Pulsante del menu con emoji -->
+                <button class="menu-button">Menù ≡</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="safari-blu.html">Safari Blu</a>
+                    <a href="escursioni.html">Escursioni</a>
+                    <a href="testimonianze.html">Testimonianze</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Project Kenya Logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Sezione Safari Blu - Parte 1 -->
+    <section id="safari-blu-parte1" class="safari-section" style="background-image: url('Foto/foto4.jpg');">
+        <div class="container">
+            <h2 style="color: rgb(155, 28, 28);">Safari</h2>
+            <p style="color: rgb(155, 28, 28);">
+                Benvenuto nell'avventura della tua vita! Lasciati trasportare nelle maestose terre del Kenya, dove la natura selvaggia incontra paesaggi mozzafiato. Con la nostra agenzia, scoprirai le meraviglie della savana, incontrerai da vicino i grandi "Big Five" e ti perderai sotto i cieli stellati africani.
+            </p>
+            <a href="testimonianze.html" class="btn">Guarda di Più</a>
+        </div>
+    </section>
+
+    <!-- Sezione Safari Blu - Parte 2 -->
+    <section id="safari-blu-parte2" class="safari-section" style="background-image: url('Foto/foto13.jpg');">
+        <div class="container">
+            <h2 style="color: rgb(155, 28, 28);">Safari</h2>
+            <p style="color: rgb(155, 28, 28);">
+                Che tu sogni di fotografare gli elefanti al tramonto, vivere l'emozione di un safari in jeep o rilassarti nei lussuosi lodge immersi nella natura, ogni dettaglio del tuo viaggio sarà curato per regalarti un'esperienza indimenticabile. Preparati a vivere il Kenya come mai avresti immaginato!
+            </p>
+            <a href="contatti.html" class="btn">Contattaci Ora!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Project Kenya. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Script per mostrare/nascondere il contenuto del menu a tendina -->
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+
+        // Chiudi il menu a tendina se si fa clic altrove
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

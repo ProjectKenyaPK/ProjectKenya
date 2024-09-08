@@ -1,0 +1,551 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo della pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Colore del testo principale */
+    background-color: #f4f4f4; /* Colore di sfondo della pagina */
+}
+
+/* Intestazione */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra sotto l'intestazione */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo img {
+    height: 60px; /* Regola l'altezza del logo */
+    width: auto;
+    display: block;
+}
+
+.menu-wrapper {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #575757;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.menu-wrapper:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* Barra di navigazione */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Sezione hero */
+#home {
+    
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+    background-size: cover;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.btn {
+    background-color: #006400;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #004d00;
+}
+
+/* Sezioni Safari Blu */
+#safari-blu-parte1, #safari-blu-parte2 {
+    position: relative;
+    color: white; /* Mantieni il testo bianco per contrastare con lo sfondo */
+    text-align: center; /* Centra il testo */
+    padding: 6rem 2rem; /* Aumenta il padding per espandere le sezioni */
+    background-size: cover; /* Assicurati che l'immagine di sfondo copra l'intera sezione */
+    background-position: center; /* Centra l'immagine di sfondo */
+    margin-bottom: 2rem; /* Aggiungi spazio tra le sezioni */
+}
+
+/* Migliora la leggibilità del testo */
+#safari-blu-parte1 h2, #safari-blu-parte2 h2 {
+    font-size: 2.5rem; /* Dimensione del titolo */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra del testo per migliorare la leggibilità */
+}
+
+#safari-blu-parte1 p, #safari-blu-parte2 p {
+    font-size: 1.25rem; /* Dimensione del testo del paragrafo */
+    line-height: 1.8; /* Altezza della linea per migliorare la leggibilità */
+    max-width: 800px; /* Limita la larghezza del testo per una migliore leggibilità */
+    margin: 0 auto 2rem; /* Centra il testo e aggiunge margine inferiore */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo per migliorare la leggibilità */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF7F50; /* Colore del pulsante arancione */
+    color: white;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #FF4500; /* Cambia colore al passaggio del mouse */
+}
+
+/* Sezione testimonianze */
+#testimonianze {
+    background: linear-gradient(135deg, #FFB03B, #FF6F00); /* Sfondo a colori fissi con sfumatura */
+    color: #fff; /* Colore del testo per la sezione testimonianze */
+    padding: 3rem 1rem;
+    border-radius: 8px; /* Aggiunta di un bordo arrotondato */
+}
+
+/* Galleria di immagini e video */
+.galleria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px; /* Spazio tra le immagini e i video */
+    justify-content: center; /* Centra le immagini e i video */
+    padding: 1rem; /* Padding per evitare che il contenuto tocchi i bordi */
+}
+
+.galleria a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Colore di sfondo per le aree vuote */
+}
+
+.galleria img,
+.galleria video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni e copre l'area */
+    display: block;
+}
+
+.galleria a:hover {
+    transform: scale(1.05); /* Effetto ingrandimento su hover */
+}
+
+.galleria img:hover,
+.galleria video:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Maggiore ombra su hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
+}
+
+/* Stile per video a schermo intero */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen video {
+    width: 100%;
+    height: 100%;
+}
+
+/* Stili per il video modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Sfondo per l'intera pagina */
+body {
+    background: url('Foto/foto7.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Sezione "Chi Siamo" con lo stesso sfondo */
+#about {
+    background: inherit; /* Usa lo sfondo ereditato dal body */
+    color: #fff; /* Colore del testo per contrastare con lo sfondo */
+    padding: 6rem 2rem; /* Assicurati che ci sia abbastanza spazio */
+    background-size: cover; /* Assicurati che l'immagine di sfondo copra l'intera sezione */
+    background-position: center; /* Centra l'immagine di sfondo */
+}
+/* Sezione contatti */
+.contatti #contact {
+    background: url('Foto/foto7.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.contatti #contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contatti #contact p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+    color: #e0e0e0;
+}
+
+/* Barra di navigazione per la pagina contatti */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra sotto l'intestazione */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo img {
+    height: 60px; /* Regola l'altezza del logo */
+    width: auto;
+    display: block;
+}
+
+.menu-wrapper {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #575757;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.menu-wrapper:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
+    margin: 0; /* Rimuove margini extra */
+}
+
+/* Sezione contatti */
+.contatti #contact {
+    background: url('Foto/foto7.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.contatti #contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contatti #contact p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+    color: #e0e0e0;
+}
+.contact-section p {
+    font-size: 1.5rem; /* Dimensione del testo aumentata */
+    line-height: 1.8; /* Maggiore spaziatura tra le righe */
+}
+/* CSS per la sezione contatti */
+.contact-section p {
+    font-size: 1.5rem; /* Dimensione del testo aumentata */
+    line-height: 1.8; /* Maggiore spaziatura tra le righe */
+    font-family: 'Arial', sans-serif; /* Usa un font comune per una maggiore compatibilità */
+}
+/* Aggiungi questi stili alla fine del tuo file styles.css */
+#commenti {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+#commenti h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.commenti-wrapper {
+    margin-bottom: 30px;
+}
+
+.commento {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.commento:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.commento-contenuto {
+    flex: 1;
+}
+
+.commento-contenuto h4 {
+    margin: 0 0 5px;
+    color: #FFB03B;
+}
+
+.commento-contenuto p {
+    margin: 0 0 10px;
+    color: #e0e0e0;
+}
+
+.data {
+    font-size: 0.8em;
+    color: #999;
+}
+
+#form-commento {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form-commento h3 {
+    margin-top: 0;
+    color: #FFB03B;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#form-commento input,
+#form-commento textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+#form-commento textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#form-commento .btn {
+    background-color: #FF7F50;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#form-commento .btn:hover {
+    background-color: #FF4500;
+}

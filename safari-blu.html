@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kenya - Safari Blu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="menu-wrapper">
+                <!-- Pulsante del menu con emoji -->
+                <button class="menu-button">Menù ≡</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="safari.html">Safari</a>
+                    <a href="escursioni.html">Escursioni</a>
+                    <a href="testimonianze.html">Testimonianze</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Project Kenya Logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Sezione Safari Blu - Parte 1 -->
+    <section id="safari-blu-parte1" style="background: url('Foto/foto010.jpg') no-repeat center center/cover; color: white;">
+        <div class="container">
+            <h2 style="color: yellow;">Safari Blu</h2>
+            <p style="color: yellow;">
+                Immergiti con noi nelle meraviglie del mare keniano con il nostro safari blu! Partenza dal molo di Mombasa con un'imbarcazione con pavimento in vetro che permette la visione del mare, tappa alla barriera corallina dove sarà possibile fare il bagno in mezzo alle acque cristalline e a tutta la fauna che le abitano.
+            </p>
+            <a href="testimonianze.html" class="btn">Guarda di Più</a>
+        </div>
+    </section>
+
+    <!-- Sezione Safari Blu - Parte 2 -->
+    <section id="safari-blu-parte2" style="background: url('Foto/foto014.jpg') no-repeat center center/cover; color: white;">
+        <div class="container">
+            <p style="color: yellow;">
+                Successivamente la rotta sarà verso la foresta di mangrovia dove le vostre guide vi faranno un tour completo di tutto quello che c’è da sapere sugli animali che si potranno avvistare e le specie di mangrovia li presenti. Infine vi recherete sull’isola di Waka Waka dove verrete accolti dalla tribù del posto e dove mangerete un menù a base di verdure e aragoste (possibilità di mangiare pollo al posto dell’aragosta solo su richiesta). Concluso il pranzo potrete assistere ad uno spettacolo offerto dalla tribù davvero niente male dove il pubblico potrà partecipare! Verrete infine riaccompagnati al molo dal quale siete partiti. C’è la possibilità di effettuare un pacchetto con un'escursione subito dopo il safari blu in modo da completare la giornata con la nostra troupe.
+            </p>
+            <a href="contatti.html" class="btn">Contattaci Ora!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Project Kenya. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Script per mostrare/nascondere il contenuto del menu a tendina -->
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+
+        // Chiudi il menu a tendina se si fa clic altrove
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

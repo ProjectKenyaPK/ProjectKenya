@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kenya - Contatti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Importa il font Roboto */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+        /* Sezione contatti */
+        .contact-section p {
+            font-family: 'Roboto', sans-serif; /* Usa il font importato */
+            font-weight: 300; /* Peso del font più leggero */
+            font-size: 1.25rem; /* Dimensione del testo dei paragrafi */
+            color: #e0e0e0; /* Colore del testo per contrastare con lo sfondo */
+            line-height: 1.8; /* Altezza della linea per migliorare la leggibilità */
+            margin: 0 auto 2rem; /* Margini per centrare e distanziare i paragrafi */
+        }
+
+        /* Specifico per il link email all'interno dei paragrafi della sezione contatti */
+        .contact-section .email-link {
+            font-size: 1.5rem; /* Dimensione del testo del link */
+            font-weight: 300; /* Peso del font più leggero */
+            color: #fff; /* Colore del testo del link */
+            text-decoration: none; /* Rimuove la sottolineatura */
+            transition: color 0.3s ease; /* Transizione per l'effetto hover */
+        }
+
+        .contact-section .email-link:hover {
+            color: #ffcc00; /* Cambia colore al passaggio del mouse */
+        }
+    </style>
+</head>
+<body class="contatti">
+    <header>
+        <div class="container">
+            <div class="menu-wrapper">
+                <!-- Pulsante del menu con emoji -->
+                <button class="menu-button">Menù ≡</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="safari.html">Safari</a>
+                    <a href="safari-blu.html">Safari Blu</a>
+                    <a href="escursioni.html">Escursioni</a>
+                    <a href="testimonianze.html">Testimonianze</a>
+                    <a href="contatti.html">Contatti</a>
+                </div>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Project Kenya Logo">
+            </a>
+        </div>
+    </header>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contattaci</h2>
+            <p>Per informazioni e prenotazioni, ti preghiamo di contattarci via email all'indirizzo <br>
+                <a href="mailto:projectkenyapk@gmail.com" class="email-link">projectkenyapk@gmail.com</a>
+            <br>Sarà nostro piacere assisterti con tutte le informazioni di cui hai bisogno e aiutarti a organizzare la tua avventura in Kenya. 
+            <br>Risponderemo al tuo messaggio nel più breve tempo possibile.</p>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Project Kenya. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+</html>
