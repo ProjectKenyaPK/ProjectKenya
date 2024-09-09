@@ -583,8 +583,8 @@ footer {
 
 /* Sezione commenti pre-impostati */
 .commenti-preimpostati {
-    background-color: rgba(40, 40, 40, 0.9); /* Sfondo più scuro */
-    color: #f1f1f1; 
+    background-color: #333; /* Sfondo più scuro */
+    color: #f1f1f1;
     padding: 40px 0;
     margin-top: 2rem;
     border-radius: 8px;
