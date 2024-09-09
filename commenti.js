@@ -8,17 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const formData = new FormData(form);
 
+        feedbackMessage.textContent = 'Invio del commento in corso...';
+        feedbackMessage.style.color = 'blue';
+
         fetch('salva_commento.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Errore nella richiesta al server');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success) {
                 feedbackMessage.textContent = data.message;
                 feedbackMessage.style.color = 'green';
                 form.reset();
-                caricaCommenti(); // Ricarica i commenti dopo l'invio
+                caricaCommenti();
             } else {
                 feedbackMessage.textContent = data.message;
                 feedbackMessage.style.color = 'red';
@@ -33,8 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function caricaCommenti() {
         fetch('commenti.txt')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Errore nel caricamento dei commenti');
+            }
+            return response.text();
+        })
         .then(data => {
+            if (!data.trim()) {
+                commentiWrapper.innerHTML = '<p>Nessun commento presente.</p>';
+                return;
+            }
             const commenti = data.trim().split('\n').map(JSON.parse);
             commentiWrapper.innerHTML = commenti.map(commento => `
                 <div class="commento">
@@ -48,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Errore nel caricamento dei commenti:', error);
+            commentiWrapper.innerHTML = '<p>Errore nel caricamento dei commenti.</p>';
         });
     }
 
-    // Carica i commenti all'avvio della pagina
     caricaCommenti();
 });
