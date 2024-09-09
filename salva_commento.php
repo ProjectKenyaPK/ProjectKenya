@@ -10,6 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    if (strlen($nome) > 100 || strlen($commento) > 1000) {
+        echo json_encode(['success' => false, 'message' => 'Nome o commento troppo lungo.']);
+        exit;
+    }
+
     $data = date('Y-m-d H:i:s');
 
     $nuovo_commento = [
