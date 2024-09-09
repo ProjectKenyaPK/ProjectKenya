@@ -137,20 +137,21 @@
         </div>
     </section>
     <!-- Sezione commenti -->
-    <section id="commenti">
+    <div id="commenti" class="section">
         <div class="container">
             <h2>Commenti</h2>
-            <div class="commenti-wrapper">
-                <!-- I commenti verranno inseriti qui dinamicamente -->
+            <div id="commenti-wrapper" class="commenti-wrapper">
+                <!-- I commenti esistenti verranno caricati qui dinamicamente -->
             </div>
+            <h3>Lascia un commento</h3>
             <form id="form-commento">
-                <h3>Lascia un commento</h3>
                 <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
                 <textarea id="commento" name="commento" placeholder="Il tuo commento" required></textarea>
                 <button type="submit" class="btn">Invia Commento</button>
             </form>
+            <div id="feedback-message"></div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="container">
