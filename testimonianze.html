@@ -67,14 +67,16 @@
                         <a href="Foto/foto32.jpg" target="_blank"><img src="Foto/foto32.jpg" alt="Foto 32"></a>
                         <a href="Foto/foto33.jpg" target="_blank"><img src="Foto/foto33.jpg" alt="Foto 33"></a>
                         
-                        <video controls>
-                            <source src="Foto/video1.mp4" type="video/mp4">
-                            Il tuo browser non supporta il tag video.
-                        </video>
-                        <video controls>
-                            <source src="Foto/video2.mp4" type="video/mp4">
-                            Il tuo browser non supporta il tag video.
-                        </video>
+                       <!-- Slot per video nella categoria Safari -->
+                    <video class="video-galleria" width="320" height="240" muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+                        <source src="Foto/video1.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+
+                    <video class="video-galleria" width="320" height="240" muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+                        <source src="Foto/video2.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
                     </div>
                 </div>
 
